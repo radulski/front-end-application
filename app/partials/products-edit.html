@@ -1,82 +1,74 @@
 <div class="container-fluid">
-            
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#/products">Produtos</a></li>
             <li class="breadcrumb-item active" aria-current="page">Editar</li>
-            </ol>
-        </nav>
+        </ol>
+    </nav>
 
-        <form ng-submit="saveChange(ident)" ng-controller="tableCtrl">
-
-            <!--<h5>nome: {{ident}}</h5>-->
-
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">item teste edição</label>
-                <div class="col-8">
-                    <input class="form-control" value="ttt" type="text" name="location" ng-model="items[ident].name">
-                </div>
+    <form ng-submit="saveChange(ident)" ng-controller="tableCtrl">
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">item teste edição</label>
+            <div class="col-8">
+                <input class="form-control" value="ttt" type="text" name="location" ng-model="items[ident].name">
             </div>
+        </div>
 
-            <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Nome do item</label>
-                <div class="col-8">
-                    <input class="form-control" type="text" ng-model="text" name="text" id="example-text-input">
-                </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Nome do item</label>
+            <div class="col-8">
+                <input class="form-control" type="text" ng-model="text" name="text" id="example-text-input">
             </div>
-            
-            <div class="form-group row">
-                <label for="example-search-input" class="col-2 col-form-label">Unidade de medida</label>
-                <div class="col-8">
-                    <input class="form-control" type="search" ng-model="text2" name="text2" id="example-search-input">
-                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Unidade de medida</label>
+            <div class="col-8">
+                <input class="form-control" type="search" ng-model="text2" name="text2" id="example-search-input">
             </div>
-    
-            <div class="form-group row">
+        </div>
+
+        <div class="form-group row">
             <label for="example-email-input" class="col-2 col-form-label">Quantidade</label>
-                <div class="col-8">
-                    <div class="input-group">
+            <div class="col-8">
+                <div class="input-group">
                     <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                     <div class="input-group-append">
                         <span class="input-group-text">UN</span>
                     </div>
-                    </div>
                 </div>
             </div>
-    
-            <div class="form-group row">
+        </div>
+
+        <div class="form-group row">
             <label for="example-email-input" class="col-2 col-form-label">Preço</label>
-                <div class="col-8">
-                    <input class="form-control" type="email" value="" id="example-email-input">
-                </div>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
             </div>
-    
-            <div class="form-group row">
-                <label for="example-email-input" class="col-2 col-form-label">Produto perecível</label>
-                <div class="col-8">
-                    <input class="form-control" type="email" value="" id="example-email-input">
-                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Produto perecível</label>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
             </div>
-    
-            <div class="form-group row">
-                <label for="example-email-input" class="col-2 col-form-label">Data de validade</label>
-                <div class="col-8">
-                    <input class="form-control" type="email" value="" id="example-email-input">
-                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Data de validade</label>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
             </div>
-    
-            <div class="form-group row">
-                <label for="example-email-input" class="col-2 col-form-label">Data de fabricação</label>
-                <div class="col-8">
-                    <input class="form-control" type="email" value="" id="example-email-input">
-                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Data de fabricação</label>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
             </div>
-    
-            <input type="submit" value="Salvar" id="btnSalvar"/>
-    
-        </form>
-            
-    </div>
-            
-    
+        </div>
+
+        <input type="submit" value="Salvar" id="btnSalvar" />
+    </form>
+</div>

@@ -1,30 +1,28 @@
 <div class="container-fluid">
-        
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#/products">Produtos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Novo</li>
+            <li class="breadcrumb-item"><a href="#/products">Produtos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novo</li>
         </ol>
     </nav>
 
     <form ng-submit="salvar()" ng-controller="tableCtrl" name="contatoForm">
-       
         <div ng-show="contatoForm.text.$invalid && contatoForm.text.$dirty" class="alert alert-danger">
-            Por favor, preencha o nome do item
+            Por favor, preencha o nome do item.
         </div>
 
         <div ng-show="contatoForm.unidadeMedida.$invalid && contatoForm.unidadeMedida.$dirty" class="alert alert-danger">
-            preencha a unidade de medida
+            Por favor, preencha a unidade de medida.
         </div>
 
         <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Nome do item *</label>
             <div class="col-8">
-                <input class="form-control" maxlength="5" type="text" ng-model="text" name="text" id="example-text-input" ng-required="true" />
+                <input class="form-control" maxlength="50" type="text" ng-model="text" name="text" id="example-text-input" ng-required="true" />
             </div>
         </div>
-        
+
         <div class="form-group row">
             <label for="example-search-input" class="col-2 col-form-label">Unidade de medida *</label>
             <div class="col-8">
@@ -37,7 +35,7 @@
         </div>
 
         <div class="form-group row">
-        <label for="example-email-input" class="col-2 col-form-label">Quantidade</label>
+            <label for="example-email-input" class="col-2 col-form-label">Quantidade</label>
             <div class="col-8">
                 <div class="input-group">
                     <input type="text" class="form-control" ng-model="quantidade">
@@ -76,8 +74,12 @@
             </div>
         </div>
 
-        <input type="submit" class="btn btn-primary" ng-disabled="contatoForm.$invalid" value="Salvar" id="btnSalvar"/>
+        <br>
 
-    </form> 
+        <div style="margin-left: 220px;">
+            <input type="submit" class="btn btn-primary" ng-disabled="contatoForm.$invalid" value="Salvar" id="btnSalvar" />
+
+            <input type="button" class="btn btn-primary" ng-disabled="" value="Cancelar" id="btnSalvar" />
+        </div>
+    </form>
 </div>
-        

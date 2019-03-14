@@ -1,28 +1,21 @@
+var app = angular.module('tableApp', ['ngRoute', 'rw.moneymask']);
 
-//This configures the routes and associates each route with a view and a controller
-var app = angular.module('productsApp', ['ngRoute']);
-
-//This configures the routes and associates each route with a view and a controller
-app.config(function ($routeProvider) {
+app.config(function($routeProvider) {
     $routeProvider
-        .when('/products',
-        {
-            //controller: 'ProductsController',
+        .when('/products', {
             templateUrl: 'app/partials/products.html'
         })
 
-        .when('/products/new',
-        {
-            //controller: 'ProductsController',
+        .when('/products/new', {
             templateUrl: 'app/partials/products-new.html'
         })
 
-        .when('/products/edit',
-        {
-            //controller: 'tableCtrl',
+        .when('/products/edit/:id', {
+            controller: 'tableCtrl',
             templateUrl: 'app/partials/products-edit.html'
         })
 
-        .otherwise({ redirectTo: '/products' });
+        .otherwise({
+            redirectTo: '/products'
+        });
 });
-
