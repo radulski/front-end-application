@@ -1,0 +1,83 @@
+<div class="container-fluid">
+        
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#/products">Produtos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novo</li>
+        </ol>
+    </nav>
+
+    <form ng-submit="salvar()" ng-controller="tableCtrl" name="contatoForm">
+       
+        <div ng-show="contatoForm.text.$invalid && contatoForm.text.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome do item
+        </div>
+
+        <div ng-show="contatoForm.unidadeMedida.$invalid && contatoForm.unidadeMedida.$dirty" class="alert alert-danger">
+            preencha a unidade de medida
+        </div>
+
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Nome do item *</label>
+            <div class="col-8">
+                <input class="form-control" maxlength="5" type="text" ng-model="text" name="text" id="example-text-input" ng-required="true" />
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Unidade de medida *</label>
+            <div class="col-8">
+                <select class="form-control" id="sel1" ng-model="text2" name="unidadeMedida" ng-required="true">
+                    <option>Litro</option>
+                    <option>Quilograma</option>
+                    <option>Unidade</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+        <label for="example-email-input" class="col-2 col-form-label">Quantidade</label>
+            <div class="col-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" ng-model="quantidade">
+                    <div class="input-group-append">
+                        <span class="input-group-text">UN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Preço *</label>
+            <div class="col-8">
+                <input class="form-control" type="text" ng-model="preco" id="preco" money-mask money-mask-append="reais" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Produto perecível *</label>
+            <div class="col-1">
+                <input class="form-control" type="checkbox" ng-model="produtoPerecivel" id="produtoPerecivel">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Data de validade</label>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Data de fabricação *</label>
+            <div class="col-8">
+                <input class="form-control" type="email" value="" id="example-email-input">
+            </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary" ng-disabled="contatoForm.$invalid" value="Salvar" id="btnSalvar"/>
+
+    </form> 
+</div>
+        

@@ -1,0 +1,72 @@
+﻿<div class="container-fluid" ng-controller="tableCtrl">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+        </ol>
+    </nav>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-0">
+        <a href="#/products/new" class="btn btn-success btn-icon-split">
+            <span class="icon text-white-50">
+            <i class="fas fa-plus"></i>
+            </span>
+            <span class="text" href="#/products/new">Novo produto</span>          
+        </a>
+        <label>Pesquisa: <input class="form-control" type="text" ng-model="criteria"></label>
+    </div>
+
+    <p></p>
+
+    <div class="table-responsive">
+        <table class="table table-condensed" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Nome do item</th>
+                <th>Unidade de medida</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Produto perecível</th>
+                <th>Data de validade</th>
+                <th>Data de fabricação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in items | filter:criteria track by $index">
+                    <td>{{item.name}}</td>
+                    <td>
+                    <span ng-bind="item.location"></span>
+                    <!--<input type="text" name="location" ng-model="item.location" ng-if="item.show">-->
+                    </td>
+
+                    <td>{{item.quantidade}}</td>
+                    <td>{{item.preco}}</td>
+                    <td>{{item.produtoPerecivel}}</td>
+                    
+                    <!--
+                    <td>
+                        <button ng-click="change($index)" ng-if="!item.show">Edit</button>
+                        <button ng-click="saveChange($index)" ng-if="item.show">Save</button>
+                        <button ng-click="delete($index)">Delete</button>
+                    </td>
+                    -->
+
+                    <td>
+                        <a href="#/products/edit/{{$index}}" ng-click="change($index)">Editar</a>
+                    </td>   
+                </tr>
+            </tr> 
+            </tbody>
+        </table>
+
+        </div>
+    </div>
+
+
+
+
+   
+
+    
+
+   

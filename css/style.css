@@ -1,0 +1,10 @@
+.bg-gradient-primary {
+    background-color: #008267;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#4e73df),to(#224abe));
+    background-image: linear-gradient(180deg,#008267 10%,#008267 100%);
+    background-size: cover;
+}
+
+.sidebar {
+    width: 12rem!important;
+}
